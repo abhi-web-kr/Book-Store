@@ -40,14 +40,14 @@ const Home = () => {
             <div className="relative z-10 p-4 backdrop-blur-sm">
                 <div className="flex justify-center items-center gap-x-4 mb-8">
                     <button
-                        className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold shadow-md transition-colors duration-300"
+                        className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold shadow-md transition-colors duration-300 cursor-pointer"
                         onClick={() => setShowType("table")}
                     >
                         Table
                     </button>
 
                     <button
-                        className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-semibold shadow-md transition-colors duration-300"
+                        className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-semibold shadow-md transition-colors duration-300 cursor-pointer"
                         onClick={() => setShowType("Card")}
                     >
                         Card
@@ -55,7 +55,7 @@ const Home = () => {
                 </div>
 
                 <div className="flex justify-between items-center">
-                    <h1 className="text-4xl my-8 font-bold text-gray-800">
+                    <h1 className="text-4xl pl-4 my-8 font-bold text-gray-800">
                         Books Library
                     </h1>
                     <Link to="/books/create">
