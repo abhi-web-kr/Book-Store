@@ -102,7 +102,7 @@ const CreateBooks = () => {
                         />
                     </div>
                     <button
-                        className="p-3 w-[300px] bg-green-500 hover:bg-green-600 text-white mx-auto my-4 rounded-2xl font-semibold shadow-md transition-colors duration-300"
+                        className="p-3 w-[300px] bg-green-500 hover:bg-green-600 text-white mx-auto my-4 rounded-2xl font-semibold shadow-md transition-colors duration-300 cursor-pointer"
                         onClick={handleSaveBook}
                     >
                         Create Book

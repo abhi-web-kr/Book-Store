@@ -9,7 +9,7 @@ const BooksTable = ({ books = [] }) => {
             <thead>
                 <tr>
                     <th className="border border-gray-300 rounded-md p-3 bg-blue-100 text-gray-800 font-semibold">
-                        No
+                        No.
                     </th>
                     <th className="border border-gray-300 rounded-md p-3 bg-blue-100 text-gray-800 font-semibold">
                         Title

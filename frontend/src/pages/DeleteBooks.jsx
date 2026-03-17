@@ -3,13 +3,12 @@ import BackButton from "../components/BackButton";
 import Spinner from "../components/Spinner";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
-import { enqueueSnackbar, useSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 
 const DeleteBooks = () => {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
     const { id } = useParams();
-    const { enqueueSaveBook } = useSnackbar();
 
     const handleDeleteBook = () => {
         setLoading(true);
@@ -49,7 +48,7 @@ const DeleteBooks = () => {
                     </h3>
 
                     <button
-                        className="p-4 bg-red-600 hover:bg-red-700 text-white m-8 w-[250px] rounded-2xl font-semibold shadow-md transition-colors duration-300"
+                        className="p-4 bg-red-600 hover:bg-red-700 text-white m-8 w-[250px] rounded-2xl font-semibold shadow-md transition-colors duration-300 cursor-pointer"
                         onClick={handleDeleteBook}
                     >
                         Yes, Delete it

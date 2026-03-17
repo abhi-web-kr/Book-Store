@@ -4,7 +4,7 @@ import Spinner from "../components/Spinner";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { enqueueSnackbar, useSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 
 const EditBooks = () => {
     const [title, setTitle] = useState("");
@@ -13,7 +13,6 @@ const EditBooks = () => {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
     const { id } = useParams();
-    const { enqueueSaveBook } = useSnackbar();
 
     useEffect(() => {
         setLoading(true);
@@ -124,7 +123,7 @@ const EditBooks = () => {
                         />
                     </div>
                     <button
-                        className="p-2 w-[300px] bg-blue-500 hover:bg-blue-600 text-white mx-auto my-2 rounded-2xl font-semibold shadow-md transition-colors duration-300"
+                        className="p-2 w-[300px] bg-blue-500 hover:bg-blue-600 text-white mx-auto my-2 rounded-2xl font-semibold shadow-md transition-colors duration-300  cursor-pointer"
                         onClick={handleEditBook}
                     >
                         Save
