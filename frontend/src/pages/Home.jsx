@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Spinner from "../components/Spinner";
 import { Link } from "react-router-dom";
-import { AiOutlineEdit } from "react-icons/ai";
-import { BsInfoCircle } from "react-icons/bs";
 import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
 import BooksCard from "../components/home/BooksCard";
 import BooksTable from "../components/home/BooksTable";
@@ -22,12 +20,12 @@ const Home = () => {
             .get(`${apiUrl}/books`)
             .then((res) => {
                 setBooks(res.data?.data || []);
-                setLoading(false);
+                //setLoading(false);
             })
             .catch((err) => {
                 console.log("Error fetching books:", err);
                 setBooks([]);
-                setLoading(false);
+                //setLoading(false);
             });
     }, []);
 
@@ -66,7 +64,21 @@ const Home = () => {
                 </div>
 
                 {loading ? (
-                    <Spinner />
+                    <div className="w-full min-h-96 flex flex-col justify-center items-center gap-6">
+                        <Spinner />
+                        <div className="text-center">
+                            <h1 className="text-4xl font-bold text-gray-800 mb-3">
+                                Loading Books...
+                            </h1>
+                            <p className="text-xl text-gray-600 mb-2">
+                                Please wait while we fetch the data
+                            </p>
+                            <p className="text-lg text-gray-500">
+                                ⏱️ This may take up to 40-60 second as the
+                                server is starting
+                            </p>
+                        </div>
+                    </div>
                 ) : showType === "table" ? (
                     <BooksTable books={books} />
                 ) : (
