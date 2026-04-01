@@ -20,12 +20,12 @@ const Home = () => {
             .get(`${apiUrl}/books`)
             .then((res) => {
                 setBooks(res.data?.data || []);
-                //setLoading(false);
+                setLoading(false);
             })
             .catch((err) => {
                 console.log("Error fetching books:", err);
                 setBooks([]);
-                //setLoading(false);
+                setLoading(false);
             });
     }, []);
 
